@@ -1,5 +1,5 @@
 import React from "react";
-import { View, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import chats from "../../assets/data/chats.json";
 import ChatListItem from "../components/ChatListItem";
 
@@ -10,7 +10,6 @@ const ChatScreen: React.FC = () => {
     <FlatList
       data={chats}
       renderItem={({ item }) => <ChatListItem chat={item} key={item.id} />}
-      style={{  }}
     />
   );
 };
