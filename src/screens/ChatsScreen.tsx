@@ -5,7 +5,7 @@ import ChatListItem from "../components/ChatListItem";
 
 // import { Container } from './styles';
 
-const ChatScreen: React.FC = () => {
+const ChatsScreen: React.FC = () => {
   return (
     <FlatList
       data={chats}
@@ -14,4 +14,4 @@ const ChatScreen: React.FC = () => {
   );
 };
 
-export default ChatScreen;
+export default ChatsScreen;
