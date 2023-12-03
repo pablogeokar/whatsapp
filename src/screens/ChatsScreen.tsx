@@ -10,6 +10,7 @@ const ChatsScreen: React.FC = () => {
     <FlatList
       data={chats}
       renderItem={({ item }) => <ChatListItem chat={item} key={item.id} />}
+      style={{ backgroundColor: 'white' }}
     />
   );
 };
