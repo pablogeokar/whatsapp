@@ -9,6 +9,7 @@ import NotImplementedScreen from './../screens/NotImplementedScreen';
 import ChatsScreen from '../screens/ChatsScreen';
 
 const MainTabNavigator: React.FC = () => {
+
     return (
         <Tab.Navigator
             initialRouteName='Chats'
@@ -35,10 +36,10 @@ const MainTabNavigator: React.FC = () => {
             <Tab.Screen
                 name='Chats'
                 component={ChatsScreen}
-                options={{
+                options={({ navigation }) => ({
                     tabBarIcon: ({ color, size }) => <Ionicons name='ios-chatbubbles' size={size} color={color} />,
-                    headerRight: () => <Entypo name='new-message' size={18} color={'royalblue'} style={{ marginRight: 10 }} />
-                }}
+                    headerRight: () => <Entypo onPress={() => navigation.navigate('Contacts')} name='new-message' size={18} color={'royalblue'} style={{ marginRight: 10 }} />
+                })}
 
             />
             <Tab.Screen
